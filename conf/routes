@@ -1,1 +1,13 @@
-GET        /                                 @controllers.Application.index
+GET          /boom/:input/box                    @controllers.Application.boomBox(input)
+POST         /boom/:input/box                    @controllers.Application.boomBox(input)
+PUT          /boom/:input/box                    @controllers.Application.boomBox(input)
+DELETE       /boom/:input/box                    @controllers.Application.boomBox(input)
+HEAD         /boom/:input/box                    @controllers.Application.boomBox(input)
+OPTIONS      /boom/:input/box                    @controllers.Application.boomBox(input)
+
+GET         /baz                                 @controllers.Application.baz
+POST        /baz                                 @controllers.Application.baz
+PUT         /baz                                 @controllers.Application.baz
+DELETE      /baz                                 @controllers.Application.baz
+HEAD        /baz                                 @controllers.Application.baz
+OPTIONS     /baz                                 @controllers.Application.baz
