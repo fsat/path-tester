@@ -42,10 +42,19 @@ BundleKeys.endpoints := Map(
   "ptest" -> Endpoint("http", 0, "path-tester",
     RequestAcl(
       Http(
-//        "^/fee/(.*)/fi/(.*)/fo/(.*)/fum$".r -> "/boom/\\1-\\2-\\3/box",
-//        "^/boom/(.*)/box$".r,
-//        "/foo" -> "/baz",
+        "^/bacon".r -> "/burger",
+        "^/tree".r,
+        "^/fee/(.*)/fi/(.*)/fo/(.*)/fum$".r -> "/boom/\\1-\\2-\\3/box",
+        "^/boom/(.*)/box$".r,
+        "/foo" -> "/baz",
         "/baz"
+      )
+    )
+  ),
+  "ptunnel" -> Endpoint("tcp", 0, "ptunnel",
+    RequestAcl(
+      Tcp(
+        12101, 3303, 5601
       )
     )
   )
